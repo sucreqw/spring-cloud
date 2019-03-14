@@ -6,5 +6,5 @@ spring:
     config:
       server:
         git:
-          uri: file:///Users/youmi/Documents/sucre12/spring cloud/spring_config/config-repo/
+          uri: file:///Users/youmi/Documents/sucre12/spring cloud/config/
 
