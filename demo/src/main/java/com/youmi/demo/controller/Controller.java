@@ -27,5 +27,9 @@ public class Controller {
         return "通过demo调用demo1:" + openFeign.test();
     }
 
+    @GetMapping("/zuul")
+    public String testZuul(){
 
+        return "8084";
+    }
 }

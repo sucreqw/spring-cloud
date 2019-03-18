@@ -16,6 +16,12 @@ public class Controller {
     @GetMapping("/test")
     public String hello(){
 
-        return "hello spring cloud!";
+        return "hello spring cloud! ";
+    }
+
+    @GetMapping("/zuul")
+    public String testZuul(){
+
+        return "8083";
     }
 }

@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: gateway # 对应config-server获取的配置文件的{application}
+  cloud:
+    config:
+      uri: http://localhost:8888 # 对应config-server地址，默认值http://localhost:8888
+      profile: dev
