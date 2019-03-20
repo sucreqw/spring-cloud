@@ -11,6 +11,6 @@ zuul:
   routes:
     youmi:
       path: /youmi/**
-      serviceId: demo
+      serviceId: demo1
 
 

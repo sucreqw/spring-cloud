@@ -11,6 +11,17 @@ spring:
          locator:
            enabled: true
            lowerCaseServiceId: true
+       routes:
+         - id: employee-service
+           uri: lb://demo
+           predicates:
+             - Path=/demo/**
+           filters:
+             - RewritePath=/demo/(?<path>.*), /$\{path}
+             - name: Hystrix
+               args:
+                 name: fallbackcmd
+                 fallbackUri: forward:/timeout
 
 server:
   port: 8989
