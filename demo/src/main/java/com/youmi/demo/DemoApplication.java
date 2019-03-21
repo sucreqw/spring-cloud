@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-@ComponentScan(basePackages = {"com.youmi.demo.controller","com.youmi.demo.domain"})
+@ComponentScan(basePackages = {"com.youmi.demo.controller","com.youmi.demo.domain","com.youmi.demo.service"})
 public class DemoApplication {
 
     public static void main(String[] args) {
