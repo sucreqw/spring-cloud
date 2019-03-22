@@ -5,8 +5,22 @@ eureka:
 spring:
   application:
     name: demo1
+  datasource:
+    username: root
+    password: youmi1989
+    url: jdbc:mysql://10.0.1.55:3306/youmi
+    driver-class-name: com.mysql.jdbc.Driver
+
 server:
   port: 8084
 feign:
   hystrix:
     enabled: true
+
+##mybatis
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.youmi.demo.entity.User
+
