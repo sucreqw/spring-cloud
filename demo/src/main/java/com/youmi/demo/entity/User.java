@@ -15,8 +15,6 @@ import jdk.nashorn.internal.ir.annotations.Ignore;
 public class User {
     private int id;
     private String nick;
-
-
     private String pass;
     private String  uid;
     private String avater;
