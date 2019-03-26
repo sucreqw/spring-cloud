@@ -4,11 +4,11 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 spring:
   application:
-    name: rab
+    name: rabrev
   rabbitmq:
     host: 10.0.1.55
     port: 5672
     username: guest
     password: guest
 server:
-  port: 8189
+  port: 8199
