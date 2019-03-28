@@ -50,7 +50,10 @@ public class RabbitConfig {
 
     @Bean
     Binding bindingExchangeMessages(@Qualifier("messages") Queue queueMessages, TopicExchange exchange) {
-        return BindingBuilder.bind(queueMessages).to(exchange).with("topic.#");//*表示一个词,#表示零个或多个词
+        return BindingBuilder.bind(queueMessages).to(exchange).with("topic.messages");//*表示一个词,#表示零个或多个词
     }
-
+    @Bean
+    Binding bindingExchangetest(@Qualifier("test") Queue queueMessages, TopicExchange exchange) {
+        return BindingBuilder.bind(queueMessages).to(exchange).with("topic.test");//*表示一个词,#表示零个或多个词
+    }
 }

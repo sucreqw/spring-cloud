@@ -26,4 +26,8 @@ public class HelloReceive {
     public void process2(String str) {
         System.out.println("test:"+str);
     }
+    @RabbitListener(queues="topic.messages")    //监听器监听指定的Queue
+    public void message(String str) {
+        System.out.println("messages:"+str);
+    }
 }
