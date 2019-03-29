@@ -1,7 +1,34 @@
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+
 <h1>8084</h1>
 
-<form action="/getuser" method="get" >
-    <input name="id"  placeholder="1">
-    <input type="submit" value="Submit" />
+<form action="/getuser" method="get">
+    <input name="id" placeholder="1">
+    <input type="submit" value="Submit"/>
 
 </form>
+
+<button onclick="test()">test</button>
+
+<script>
+
+    function test() {
+        // alert('1212');
+        $.ajax({
+            type: 'GET',
+            url: '/getuser?id=1',
+            datatype: 'text',
+            success: function (data) {
+                var d = data;
+                alert(d.nick);
+
+            },
+            error: function (data) {
+                alert();
+            }
+        });
+
+    }
+
+</script>

@@ -31,8 +31,8 @@ public class MsgProducer implements RabbitTemplate.ConfirmCallback {
     public void send(String name) {
         CorrelationData correlationData = new CorrelationData(UUID.randomUUID().toString());
         template.convertAndSend("exchange",name,"hello,rabbit~",correlationData);
-        System.out.println("msg send");
-        Map<String,String> set=new Hashtable<>();
+        System.out.println("send...");
+        Map<String,String> set=new HashMap<>();
 
     }
 
